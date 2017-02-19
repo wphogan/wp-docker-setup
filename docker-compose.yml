@@ -1,5 +1,5 @@
-wordpress:
-  image: wordpress
+wordpress-wpcli-xdebug:
+  image: wphogan/docker-wordpress-wpcli-xdebug
   links:
     - wordpress_db:mysql
   ports:
