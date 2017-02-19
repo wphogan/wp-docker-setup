@@ -15,6 +15,16 @@ Remove all containers:
 Remove all docker images: 
 ` docker rmi $(docker images -q)`
 
+Stop specific container:
+
+```
+docker pull mysql
+docker stop my-mysql-container
+docker rm my-mysql-container
+docker run --name=my-mysql-container --restart=always \
+  -e MYSQL_ROOT_PASSWORD=mypwd -v /my/data/dir:/var/lib/mysql -d mysql
+  ```
+
 Show running containers:
 `docker ps`
 
