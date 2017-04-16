@@ -3,8 +3,14 @@
 ### https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-and-phpmyadmin-with-docker-compose-on-ubuntu-14-04
 
 ### Commands:
+Stop containers:
 `docker-compose stop`
+
+Detached continer:
 `docker-compose up -d`
+
+Access bash of container:
+`docker exec -it wp-wpcli-xdebug  bash`
 
 Kill all containers:
 `docker kill $(docker ps -q)`
