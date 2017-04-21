@@ -24,6 +24,9 @@ Remove all containers:
 Remove all docker images: 
 ` docker rmi $(docker images -q)`
 
+Fresh start: kill and remove EVERYTHING 
+`docker kill $(docker ps -q) && docker rm $(docker ps -a -q) && docker rmi $(docker images -q)`
+
 Stop specific container:
 
 ```
