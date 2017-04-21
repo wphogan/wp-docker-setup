@@ -9,6 +9,9 @@ Stop containers:
 Detached continer:
 `docker-compose up -d`
 
+Update container locally
+`docker pull wphogan/docker-wordpress-wpcli-xdebug`
+
 Access bash of container:
 `docker exec -it wp-wpcli-xdebug  bash`
 
