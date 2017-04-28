@@ -1,5 +1,4 @@
 wordpress-wpcli-xdebug:
-  container_name: wp-wpcli-xdebug
   image: wphogan/docker-wordpress-wpcli-xdebug
   links:
     - wordpress_db:mysql
@@ -8,7 +7,6 @@ wordpress-wpcli-xdebug:
   volumes:
     - ./wordpress:/var/www/html
 wordpress_db:
-  container_name: wordpress_db
   image: mariadb
   ports:
     - 8080:3306
@@ -17,7 +15,6 @@ wordpress_db:
   volumes:
       - ./mysql:/var/lib/mysql
 phpmyadmin:
-  container_name: phpmyadmin
   image: corbinu/docker-phpmyadmin
   links:
     - wordpress_db:mysql
