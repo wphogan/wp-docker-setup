@@ -37,6 +37,16 @@ docker run --name=my-mysql-container --restart=always \
   -e MYSQL_ROOT_PASSWORD=mypwd -v /my/data/dir:/var/lib/mysql -d mysql
   ```
 
+Install ZipArchive:
+`docker exec -it wordpress-wpcli-xdebug_1 bash`
+
+```
+apt-get update && apt-get install -y zlib1g-dev \
+  && rm -rf /var/lib/apt/lists/* \
+  && docker-php-ext-install zip \
+  && /etc/init.d/apache2 reload
+```
+
 Show running containers:
 `docker ps`
 
